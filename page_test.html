@@ -11,15 +11,11 @@
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
       color: white;
-      overflow: hidden;
       background-color: black;
     }
 
-    /* Navigation styling */
     nav {
       width: 100%;
       background-color: #301934;
@@ -31,7 +27,6 @@
       justify-content: center;
       align-items: center;
       gap: 2em;
-      transition: max-height 0.3s ease;
     }
 
     nav a {
@@ -44,75 +39,27 @@
       text-decoration: underline;
     }
 
-    /* Mobile-specific styles */
-    @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1em 2em;
-        max-height: 0;
-        overflow: hidden;
-      }
-
-      nav a {
-        padding: 0.5em 0;
-        width: 100%;
-        text-align: left;
-        font-size: 1.1em;
-      }
-
-      nav.show {
-        max-height: 300px; /* Adjust based on menu content */
-      }
-
-      /* Hamburger Icon */
-      .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1em;
-        left: 1em;
-        font-size: 1.5em;
-        cursor: pointer;
-        color: white;
-        background: none;
-        border: none;
-      }
+    .logo {
+      position: absolute;
+      left: 1em;
+      display: flex;
+      align-items: center;
     }
 
-    /* Header styling */
-    h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: 1.5em;
-      margin: 0.5em 0 2em;
-    }
-
-    p {
-      font-size: 1em;
-      margin-top: 1em;
-      text-align: center;
+    .logo img {
+      height: 40px;
+      width: auto;
     }
   </style>
 </head>
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-  <nav id="nav-menu">
+  <nav>
+    <a href="/" class="logo">
+      <img src="/logo.png" alt="Team Comuter Logo">
+    </a>
     <a href="/about-us">About Us</a>
     <a href="https://discord.gg/MZQcUqbVqM">Join our Discord</a>
     <a href="https://routinehub.co/user/comuterdevs">RoutineHub</a>
   </nav>
-  <h1>Welcome</h1>
-  <h2>We are Team Comuter</h2>
-  <p>Click on one of the links in the navigation bar to get started.</p>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav-menu');
-      nav.classList.toggle('show');
-    }
-  </script>
 </body>
 </html>
