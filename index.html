@@ -1,94 +1,89 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Comuter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            height: 100vh;
-            background: linear-gradient(120deg, black, #2D004E);
-            position: relative;
-        }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Comuter</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      background-color: black;
+    }
 
-        /* Create a pseudo-element for color animation */
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            animation: colorShift 5s ease-in-out infinite alternate;
-            z-index: 1;
-        }
+    nav {
+      width: 100%;
+      background-color: #301934;
+      padding: 1em;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+    }
 
-        @keyframes colorShift {
-            0% { background-color: rgba(0, 0, 0, 0.5); }
-            100% { background-color: rgba(45, 0, 78, 0.5); }
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
 
-        #content {
-            width: 90%;
-            max-width: 500px;
-            position: relative;
-            z-index: 2;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        h1, p, .button-link {
-            margin: 10px 0;
-        }
+    .logo {
+      position: absolute;
+      left: 1em;
+      display: flex;
+      align-items: center;
+    }
 
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-        }
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
 
-        .button-link {
-            background-color: #1DA1F2;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            width: 100px;
-            margin: 5px auto;
-        }
+    main {
+      text-align: center;
+      padding-top: 8em; /* Ensures content starts below the fixed navbar */
+      max-width: 600px;
+      line-height: 1.6;
+      color: #ccc;
+    }
 
-        #routinehub {
-            background-color: #333;
-        }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 0.5em;
+      color: white;
+    }
 
-        #discord {
-            background-color: #5865F2;
-        }
-    </style>
-    <script>
-        function navigate(url) {
-            window.location.href = url;
-        }
-    </script>
-    </head>
-    <body>
-    <div id="content">
-        <h1>[WELCOME TO TEAM COMUTER. THIS WEBSITE IS STILL UNDER CONSTRUCTION]</h1>
-        <p>Made by Team Comuter.</p>
-        <button class="button-link" onclick="navigate('https://x.com/comuterdevs')">Twitter</button>
-        <button class="button-link" id="routinehub" onclick="navigate('https://routinehub.co/user/comuterdevs')">RoutineHub</button>
-        <button class="button-link" id="discord" onclick="navigate('https://discord.gg/MZQcUqbVqM')">Discord</button>
-        <p>Team Comuter - Hosted by Comuter, Jeremy, Simplicity, and Querty</p>
-    </div>
-    </body>
+    p {
+      font-size: 1.2em;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">
+      <img src="/logo.png" alt="Team Comuter Logo">
+    </a>
+    <a href="/about-us">About Us</a>
+    <a href="https://discord.gg/MZQcUqbVqM">Join our Discord</a>
+    <a href="https://routinehub.co/user/comuterdevs">RoutineHub</a>
+  </nav>
+
+  <main>
+    <h1>Welcome to Team Comuter</h1>
+    <p>Click one of the links in the navigation bar to start.</p>
+  </main>
+</body>
 </html>
