@@ -25,6 +25,7 @@
       left: 0;
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 2em;
     }
 
@@ -36,6 +37,18 @@
 
     nav a:hover {
       text-decoration: underline;
+    }
+
+    .logo {
+      position: absolute;
+      left: 1em;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
     }
 
     main {
@@ -68,6 +81,9 @@
 </head>
 <body>
   <nav>
+    <a href="/" class="logo">
+      <img src="/logo.png" alt="Team Comuter Logo">
+    </a>
     <a href="/about-us">About Us</a>
     <a href="https://discord.gg/MZQcUqbVqM">Join our Discord</a>
     <a href="https://routinehub.co/user/comuterdevs">RoutineHub</a>
